@@ -1,0 +1,4 @@
+SELECT m.Nama, m.Nim, mk.nama_makul FROM mahasiswa m
+JOIN t_makul_mahasiswa tmk ON m.Nim = tmk.nim
+JOIN m_makul mk ON mk.id = tmk.id_makul
+WHERE m.Nim = '123456789'
