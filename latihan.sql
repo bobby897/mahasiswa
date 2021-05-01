@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2021 at 10:02 AM
+-- Generation Time: May 01, 2021 at 12:04 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -34,17 +34,18 @@ CREATE TABLE `mahasiswa` (
   `Nim` char(9) NOT NULL,
   `Email` varchar(100) NOT NULL,
   `Jurusan` varchar(100) NOT NULL,
-  `Gambar` varchar(100) NOT NULL
+  `Gambar` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `Nama`, `Nim`, `Email`, `Jurusan`, `Gambar`) VALUES
-(1, 'dinosa', '123456789', 'Matematika', 'dino@gmail.com', ''),
-(2, 'dina', '987654321', 'Kimll', 'dina@gmial.com', ''),
-(3, 'eni', '333222111', 'Ipa', 'eni@gmail.om', '');
+INSERT INTO `mahasiswa` (`id`, `Nama`, `Nim`, `Email`, `Jurusan`, `Gambar`, `password`) VALUES
+(1, 'dinosa', '123456789', 'Matematika', 'dino@gmail.com', '', 'dinosa'),
+(2, 'dina', '987654321', 'Kimll', 'dina@gmial.com', '', 'dina'),
+(3, 'eni', '333222111', 'Ipa', 'eni@gmail.om', '', 'eni');
 
 -- --------------------------------------------------------
 
@@ -121,7 +122,7 @@ ALTER TABLE `t_makul_mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `m_makul`
