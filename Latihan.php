@@ -5,7 +5,15 @@ $mahasiswa=query("SELECT * FROM mahasiswa");
 
 if(isset($_POST["cari"])){
 	$mahasiswa=cari($_POST["keyword"]);
+}if ($_POST){
+	$password=$_POST['password'];
+$mahasiswa=query("SELECT * FROM `mahasiswa` Where Password='$password'");
+	
+}if ($_POST){
+$username=$_POST['nim'];
+$mahasiswa=query("SELECT * FROM `mahasiswa` Where Nim='$username'"); 
 }
+
 
 //echo $sql;
  ?>
